@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,33 +19,30 @@ export default function Navbar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="#"
+                  <Link
+                    href="/User"
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Home
-                  </a>
-
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    href="/NearbyHospitals"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Find Hospitals
-                  </a>
-
-                  <a
-                    href="MedicalHistory"
+                  </Link>
+                  <Link
+                    href="/MedicalHistory"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Medical History
-                  </a>
-
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    href="/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -169,12 +167,6 @@ export default function Navbar() {
           )}
         </Transition>
       </nav>
-
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-        </div>
-      </header>
     </div>
   );
 }

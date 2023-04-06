@@ -1,12 +1,13 @@
-import MedicalHistory from "@/components/MedicalHistory";
-import Navbar from "@/components/Navbar";
-import NearbyHospitals from "@/components/NearbyHospitals";
+import MedicalHistory from "@/pages/MedicalHistory";
 
 export default function User() {
   return (
     <>
-      <Navbar />
-      <MedicalHistory />
+      <header className="bg-white shadow">
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+        </div>
+      </header>
     </>
   );
 }
